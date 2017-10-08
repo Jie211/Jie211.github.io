@@ -1,0 +1,10 @@
+<font face="monospace"><font color="#ffd787">1</font>. link&#xA0;<font color="#ffaf87">-L</font>/usr/<font color="#87af87">local</font>/lib/&#xA0;<font color="#ffaf87">-lprofiler</font>
+<font color="#ffd787">2</font>.&#xA0;<font color="#87af87">export</font><font color="#ffafaf">&#xA0;CPUPROFILE=</font>prof.out
+<font color="#ffd787">3</font>. ./a.out
+&#xA0;&#xA0;<font color="#4e4e4e">&#xA6;</font>&#xA0;-<font color="#d7d787">&gt;</font>&#xA0;PROFILE: interrupts/evictions/bytes&#xA0;<font color="#d7d787">=</font>&#xA0;<font color="#ffd787">95</font>/<font color="#ffd787">1</font>/<font color="#ffd787">1608</font>
+<font color="#ffd787">4</font>. pprof ./a.out prof.out
+&#xA0;&#xA0;<font color="#4e4e4e">&#xA6;</font>&#xA0;-<font color="#d7d787">&gt;</font>&#xA0;top
+<font color="#ffd787">5</font>. pprof&#xA0;<font color="#ffaf87">--dot</font>&#xA0;./a.out prof.out&#xA0;<font color="#d7d787">&gt;</font>&#xA0;prof.dot
+&#xA0;&#xA0;dot&#xA0;<font color="#ffaf87">-T</font>&#xA0;png prof.dot&#xA0;<font color="#d7d787">&gt;</font>&#xA0;prof.png
+<font color="#ffd787">6</font>. pprof&#xA0;<font color="#ffaf87">--text</font>&#xA0;./a.out prof.out
+</font>

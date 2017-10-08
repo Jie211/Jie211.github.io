@@ -1,0 +1,22 @@
+<font face="monospace"><font color="#d7d787">[</font>root@miro<font color="#d7d787">]</font>~# which nvcc
+/usr/<font color="#87af87">local</font>/cuda-6.<font color="#ffd787">5</font>/bin/nvcc
+
+<font color="#d7d787">[</font>root@miro<font color="#d7d787">]</font>~/cuda_tmp# nvcc&#xA0;<font color="#ffaf87">-V</font>
+nvcc: NVIDIA&#xA0;<font color="#afaf5f">(</font><font color="#ffaf87">R</font><font color="#afaf5f">)</font>&#xA0;Cuda compiler driver
+Copyright&#xA0;<font color="#afaf5f">(</font><font color="#ffaf87">c</font><font color="#afaf5f">)</font>&#xA0;2005-2014 NVIDIA Corporation
+Built on Thu_Jul_17_21:41:27_CDT_2014
+Cuda compilation tools, release&#xA0;<font color="#ffd787">6</font>.<font color="#ffd787">5</font>, V6.<font color="#ffd787">5</font>.<font color="#ffd787">12</font>
+
+<font color="#d7d787">[</font>root@miro<font color="#d7d787">]</font>~/cuda_tmp# vi&#xA0;<font color="#87af87">test</font>.c
+
+<font color="#d7d7af">main(){</font>
+&#xA0;&#xA0;<font color="#4e4e4e">&#xA6;</font>&#xA0;<font color="#4e4e4e">&#xA6;</font>&#xA0;<font color="#4e4e4e">&#xA6;</font>&#xA0;<font color="#87af87">printf</font><font color="#afaf5f">(</font><font color="#d7d787">&quot;</font><font color="#87afaf">hello</font><font color="#ffaf87">\n</font><font color="#d7d787">&quot;</font><font color="#afaf5f">)</font><font color="#d7d787">;</font>
+<font color="#d7d7af">}</font>
+
+<font color="#d7d787">[</font>root@miro<font color="#d7d787">]</font>~/cuda_tmp# nvcc&#xA0;<font color="#87af87">test</font>.c
+<font color="#87af87">test</font>.c: In&#xA0;<font color="#d7d7af">function</font>&#xA0;&#x2018;main&#x2019;:
+<font color="#87af87">test</font>.c:2: &#x8B66;&#x544A;: incompatible implicit declaration of built-in&#xA0;<font color="#d7d7af">function</font>&#xA0;&#x2018;<font color="#87af87">printf</font>&#x2019;
+
+<font color="#d7d787">[</font>root@miro<font color="#d7d787">]</font>~/cuda_tmp# ./a.out
+hello
+</font>
