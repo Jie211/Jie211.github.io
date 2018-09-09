@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.3.9"
+    "version": "3.7.1"
   },
   "dependencies": {
     "hexo": "^3.2.0",
@@ -41,6 +41,7 @@
     "hexo-toc": "^1.1.0",
     "hexo-uglify": "0.0.3",
     "hexo-util": "^0.6.1",
+    "nodejieba": "^2.2.6",
     "save-dev": "^2.0.0"
   }
 }
