@@ -21,6 +21,8 @@ Hexoのインストールは簡単，[HP](https://hexo.io)を参照してやれ�
 
 themeは簡単の方が好きなので，[appollo](https://github.com/pinggod/hexo-theme-apollo)を使用します．
 
+:duck_good:
+
 <div class="tip">
 themeのDependentを忘れないで
 

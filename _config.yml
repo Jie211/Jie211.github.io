@@ -99,7 +99,7 @@ prism_plugin:
 # robotstxt
 robotstxt:
   useragent: "*"
-  sitemap: 
+  sitemap:
     - /sitemap.xml
     - /baidusitemap.xml
 
@@ -114,7 +114,7 @@ uglify:
   mangle: true
   output:
   compress:
-  exclude: 
+  exclude:
     - "*.min.js"
 
 # clean-css - css minify
@@ -125,17 +125,17 @@ clean_css:
 html_minifier:
   exclude:
   removeComments: true
-  removeCommentsFromCDATA: false 
-  removeCDATASectionsFromCDATA: false 
-  collapseWhitespace: true 
-  conservativeCollapse: true 
+  removeCommentsFromCDATA: false
+  removeCDATASectionsFromCDATA: false
+  collapseWhitespace: true
+  conservativeCollapse: true
   preserveLineBreaks: true
-  collapseBooleanAttributes: false 
+  collapseBooleanAttributes: false
   removeAttributeQuotes: false
-  removeRedundantAttributes: false 
+  removeRedundantAttributes: false
   preventAttributesEscaping: false
   useShortDoctype: false
-  removeEmptyAttributes: false 
+  removeEmptyAttributes: false
   removeScriptTypeAttributes: false
   removeStyleLinkTypeAttributes: false
   removeOptionalTags: false
@@ -147,3 +147,12 @@ html_minifier:
   minifyJS: true
   minifyCSS: true
   minifyURLs: false
+
+# githubemojis
+githubEmojis:
+  enable: true
+  className: github-emoji
+  unicode: false
+  localEmojis:
+    duck_good:
+      src: /emoji/duck_good.png
