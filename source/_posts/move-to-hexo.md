@@ -13,6 +13,7 @@ description: blog move to Hexo-base
 <!-- more -->
 
 <!-- toc -->
+
 # hexo
 
 Hexoはjavascriptで開発したから，npmでパッケージをインストールできる．
@@ -84,5 +85,11 @@ themeの設定はthemes/apollo/_config.ymlに書きます．apolloはdisqusとgo
   support footnotes.[Github](https://github.com/LouisBarranqueiro/hexo-footnotes)
 
 {% instagram _BbVNMvlgv %}
+
+{% flickr 10222376893 z %}
+
+{% twitter https://twitter.com/jie211/status/793375352890400768 %}
+
+{% soundcloud fuckcalo/calo-dangerous 166 false ffff00 false false false false false %}
 
 [^1]: Fast math typesetting for the web[Github](https://github.com/Khan/KaTeX)

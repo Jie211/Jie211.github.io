@@ -156,3 +156,18 @@ githubEmojis:
   localEmojis:
     duck_good:
       src: /emoji/duck_good.png
+
+# toc
+toc:
+  maxdepth: 3
+  class: toc
+  slugify: transliteration
+  decodeEntities: false
+  anchor:
+    position: after
+    symbol: '#'
+    style: header-anchor
+
+flickr_api_key: d1f4824636cbd5eecbda3317d7f86f36
+flickr_cache_file_path: hexo-tag-flickr-cache.json
+flickr_cache_expires: 2592000000
