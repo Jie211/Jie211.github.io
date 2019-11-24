@@ -1,0 +1,10 @@
+<font face="monospace"><font color="#c000c0">1</font>. link&#xA0;-L/usr/local/lib/&#xA0;-lprofiler
+<font color="#c000c0">2</font>.&#xA0;<font color="#2277cc">export</font>&#xA0;CPUPROFILE=prof.out
+<font color="#c000c0">3</font>. ./a.out
+&#xA0;&#xA0;&#xA0;&#xA0;-<font color="#2277cc">&gt;</font>&#xA0;PROFILE: interrupts/evictions/bytes&#xA0;<font color="#2277cc">=</font>&#xA0;<font color="#c000c0">95</font>/<font color="#c000c0">1</font>/<font color="#c000c0">1608</font>
+<font color="#c000c0">4</font>. pprof ./a.out prof.out
+&#xA0;&#xA0;&#xA0;&#xA0;-<font color="#2277cc">&gt;</font>&#xA0;top
+<font color="#c000c0">5</font>. pprof&#xA0;--dot&#xA0;./a.out prof.out&#xA0;<font color="#2277cc">&gt;</font>&#xA0;prof.dot
+&#xA0;&#xA0;dot&#xA0;-T&#xA0;png prof.dot&#xA0;<font color="#2277cc">&gt;</font>&#xA0;prof.png
+<font color="#c000c0">6</font>. pprof&#xA0;--text&#xA0;./a.out prof.out
+</font>

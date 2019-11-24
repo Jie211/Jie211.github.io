@@ -1,0 +1,21 @@
+<font face="monospace"><font color="#808080">#!/bin/bash</font>
+/sbin/modprobe nvidia
+<font color="#2277cc">if&#xA0;</font><font color="#2277cc">[</font>&#xA0;<font color="#2277cc">&quot;</font>$?<font color="#2277cc">&quot;</font>&#xA0;<font color="#2277cc">-eq</font>&#xA0;<font color="#c000c0">0</font>&#xA0;<font color="#2277cc">]</font><font color="#2277cc">;</font>&#xA0;<font color="#2277cc">then</font>
+&#xA0;&#xA0;<font color="#808080"># Count the number of NVIDIA controllers found.</font>
+&#xA0;&#xA0;NVDEVS=`lspci&#xA0;<font color="#2277cc">|</font>&#xA0;<font color="#2277cc">grep</font>&#xA0;-i&#xA0;NVIDIA`
+&#xA0;&#xA0;N3D=`<font color="#2277cc">echo</font><font color="#00c000">&#xA0;</font><font color="#2277cc">&quot;</font>$NVDEVS<font color="#2277cc">&quot;</font><font color="#00c000">&#xA0;</font><font color="#2277cc">|</font>&#xA0;<font color="#2277cc">grep</font>&#xA0;<font color="#2277cc">&quot;</font><font color="#00c000">3D controller</font><font color="#2277cc">&quot;</font>&#xA0;<font color="#2277cc">|</font>&#xA0;wc&#xA0;-l`
+&#xA0;&#xA0;NVGA=`<font color="#2277cc">echo</font><font color="#00c000">&#xA0;</font><font color="#2277cc">&quot;</font>$NVDEVS<font color="#2277cc">&quot;</font><font color="#00c000">&#xA0;</font><font color="#2277cc">|</font>&#xA0;<font color="#2277cc">grep</font>&#xA0;<font color="#2277cc">&quot;</font><font color="#00c000">VGA compatible controller</font><font color="#2277cc">&quot;</font>&#xA0;<font color="#2277cc">|</font>&#xA0;wc&#xA0;-l`
+&#xA0;&#xA0;N=`<font color="#2277cc">expr</font>&#xA0;$N3D&#xA0;+&#xA0;$NVGA&#xA0;-&#xA0;<font color="#c000c0">1</font>`
+&#xA0;&#xA0;<font color="#2277cc">for</font>&#xA0;i&#xA0;<font color="#2277cc">in</font>&#xA0;`seq&#xA0;<font color="#c000c0">0</font>&#xA0;$N`<font color="#2277cc">;</font>&#xA0;<font color="#2277cc">do</font>
+&#xA0;&#xA0;&#xA0;&#xA0;mknod&#xA0;<font color="#2277cc">-m</font>&#xA0;<font color="#c000c0">666</font>&#xA0;/dev/nvidia$i&#xA0;c&#xA0;<font color="#c000c0">195</font>&#xA0;$i
+&#xA0;&#xA0;<font color="#2277cc">done</font>
+&#xA0;&#xA0;mknod&#xA0;<font color="#2277cc">-m</font>&#xA0;<font color="#c000c0">666</font>&#xA0;/dev/nvidiactl c&#xA0;<font color="#c000c0">195</font>&#xA0;<font color="#c000c0">255</font>
+<font color="#2277cc">else</font>&#xA0;fiexit&#xA0;<font color="#c000c0">1</font>
+/sbin/modprobe nvidia-uvm
+<font color="#2277cc">if&#xA0;</font><font color="#2277cc">[</font>&#xA0;<font color="#2277cc">&quot;</font>$?<font color="#2277cc">&quot;</font>&#xA0;<font color="#2277cc">-eq</font>&#xA0;<font color="#c000c0">0</font>&#xA0;<font color="#2277cc">]</font><font color="#2277cc">;</font>&#xA0;<font color="#2277cc">then</font>
+&#xA0;&#xA0;<font color="#808080"># Find out the major device number used by the nvidia-uvm driver</font>
+&#xA0;&#xA0;D=`<font color="#2277cc">grep</font>&#xA0;nvidia-uvm /proc/devices&#xA0;<font color="#2277cc">|</font>&#xA0;awk&#xA0;<font color="#2277cc">&apos;</font><font color="#00c000">{print $1}</font><font color="#2277cc">&apos;</font>`
+&#xA0;&#xA0;mknod&#xA0;<font color="#2277cc">-m</font>&#xA0;<font color="#c000c0">666</font>&#xA0;/dev/nvidia-uvm c&#xA0;$D&#xA0;<font color="#c000c0">0</font>
+<font color="#2277cc">else</font>
+<font color="#2277cc">fi</font>
+</font>

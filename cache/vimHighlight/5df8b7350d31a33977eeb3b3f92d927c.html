@@ -1,0 +1,17 @@
+<font face="monospace"><font color="#2277cc">#include&#xA0;</font><font color="#00ffff">&quot;header.h&quot;</font>
+
+&#xA0;&#xA0;<font color="#2277cc">void</font>
+gmres_CRS(<font color="#2277cc">double</font>&#xA0;*val,
+&#xA0;&#xA0;&#xA0;&#xA0;<font color="#2277cc">const</font>&#xA0;<font color="#2277cc">int</font>&#xA0;*col,
+&#xA0;&#xA0;&#xA0;&#xA0;<font color="#2277cc">const</font>&#xA0;<font color="#2277cc">int</font>&#xA0;rs)
+{
+&#xA0;&#xA0;<font color="#2277cc">int</font>&#xA0;i,j,k;
+&#xA0;&#xA0;<font color="#2277cc">FILE</font>&#xA0;*p_x,*p_his,*p_loop;
+&#xA0;&#xA0;<font color="#2277cc">double</font>&#xA0;*rvec, *axvec,
+&#xA0;&#xA0;<font color="#2277cc">int</font>&#xA0;count =&#xA0;<font color="#c000c0">0</font>;
+&#xA0;&#xA0;<font color="#808080">/*</font><font color="#808080">&#xA0;#ifdef TIME&#xA0;</font><font color="#808080">*/</font>
+&#xA0;&#xA0;fclose(p_x);<font color="#808080">//&#x4E2D;&#x6587;</font>
+fclose(p_his);<font color="#808080">//&#x65E5;&#x672C;&#x8A9E;</font>
+&#xA0;&#xA0;fclose(p_loop);
+}
+</font>

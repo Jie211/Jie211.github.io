@@ -1,0 +1,20 @@
+<font face="monospace"><font color="#2277cc">[</font>root@miro cuda_tmp<font color="#2277cc">]</font># yum update libvdpau
+...
+Setting up Update Process
+Package<font color="#2277cc">(</font>s<font color="#2277cc">)</font>&#xA0;libvdpau available, but not installed.
+No Packages marked&#xA0;<font color="#2277cc">for</font>&#xA0;Update
+
+<font color="#2277cc">[</font>root@miro cuda_tmp<font color="#2277cc">]</font><font color="#808080"># vi /etc/yum.repos.d/linuxtech.repo</font>
+
+<font color="#2277cc">[</font>linuxtech<font color="#2277cc">]</font>
+name=LinuxTECH
+baseurl=<a href="http://pkgrepo.linuxtech.net/el6/release/">http://pkgrepo.linuxtech.net/el6/release/</a>
+enabled=<font color="#c000c0">1</font>
+gpgcheck=<font color="#c000c0">1</font>
+gpgkey=<a href="http://pkgrepo.linuxtech.net/el6/release/RPM-GPG-KEY-LinuxTECH.NET">http://pkgrepo.linuxtech.net/el6/release/RPM-GPG-KEY-LinuxTECH.NET</a>
+
+<font color="#2277cc">[</font>root@miro cuda_tmp<font color="#2277cc">]</font><font color="#808080"># yum install libvdpau</font>
+
+<font color="#2277cc">[</font>root@miro cuda_tmp<font color="#2277cc">]</font><font color="#808080"># yum list installed | grep libvdpau</font>
+libvdpau.x86_64&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<font color="#c000c0">0</font>.5<font color="#2277cc">-2</font>.el6&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;@linuxtech
+</font>

@@ -1,0 +1,28 @@
+<font face="monospace"><font color="#2277cc">[</font>root@miro ~<font color="#2277cc">]</font>#&#xA0;<font color="#2277cc">echo</font><font color="#00c000">&#xA0;</font>$SHELL
+/bin/bash
+
+<font color="#2277cc">[</font>root@miro ~<font color="#2277cc">]</font># yum install zsh
+
+<font color="#2277cc">[</font>root@miro ~<font color="#2277cc">]</font># cat /etc/shells
+/bin/sh
+/bin/bash
+/sbin/nologin
+/bin/dash
+/bin/zsh
+
+<font color="#2277cc">[</font>root@miro ~<font color="#2277cc">]</font># chsh
+root &#x306E;&#x30B7;&#x30A7;&#x30EB;&#x3092;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;
+&#x65B0;&#x3057;&#x3044;&#x30B7;&#x30A7;&#x30EB;&#xA0;<font color="#2277cc">[</font>/bin/bash<font color="#2277cc">]</font>: /bin/zsh
+&#x30B7;&#x30A7;&#x30EB;&#x3092;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;
+
+<font color="#2277cc">[</font>root@miro<font color="#2277cc">]</font>~#&#xA0;<font color="#2277cc">echo</font><font color="#00c000">&#xA0;</font>$SHELL
+/bin/zsh
+
+<font color="#2277cc">[</font>root@miro<font color="#2277cc">]</font>~# vi .zshrc
+
+autoload&#xA0;-U&#xA0;compinit
+compinit
+setopt auto_cd
+setopt auto_pushd
+setopt correct
+</font>
