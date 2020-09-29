@@ -1,16 +1,16 @@
 menu:
-    Blog: /
-    Archive: /archives/
-    GitHub: https://github.com/jie211
-    Instagram: https://www.instagram.com/jie211/
-    Rss: /atom.xml
+  Blog: /
+  Archive: /archives/
+  GitHub: https://github.com/jie211
+  Instagram: https://www.instagram.com/jie211/
+  Rss: /atom.xml
 
 favicon: /favicon.png
 logo: /favicon.png
 
 # Comment
 # e.g disqus: seansun
-disqus: https-jie211-github-io
+disqus:
 duoshuo:
 
 # Analytics
